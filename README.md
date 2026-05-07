@@ -1,3 +1,38 @@
+
+
+Understand-Anything: Plugin giúp đọc hiểu codebase siêu nhanh 🔥
+
+Mình vừa thử một plugin Claude Code trên một codebase khoảng 200.000 dòng. Chưa tới 2 phút, nó đã tạo ra một bản đồ kiến thức tương tác cho toàn bộ dự án: từ file, function, class cho đến các dependency liên quan.
+
+Plugin này tên là Understand-Anything, và đây là một trong những thứ ấn tượng nhất mình cài trong Claude Code tháng này.
+Khi chạy lệnh /understand, nó sẽ kích hoạt 5 agent chạy song song:
+
+📌 Quét toàn bộ file, ngôn ngữ lập trình và framework đang dùng
+📌 Phân tích từng file để lấy function, class, import và tạo các node trong graph
+📌 Nhóm code theo từng lớp kiến trúc như API, Service, Data, UI, Utility
+📌 Tự tạo các hướng dẫn onboarding theo thứ tự dependency
+📌 Kiểm tra lại graph để đảm bảo không bị thiếu hoặc sai liên kết
+
+Kết quả là một dashboard tương tác bằng React Flow. Mỗi phần được tô màu theo lớp kiến trúc, các node có thể bấm vào được. Khi chọn một function, bạn sẽ thấy code, các mối liên hệ của nó và phần giải thích bằng ngôn ngữ dễ hiểu.
+
+Điểm hay là nó không chỉ vẽ sơ đồ code, mà còn giúp mình hiểu codebase tốt hơn:
+
+✅Tìm kiếm theo ngữ nghĩa, ví dụ hỏi “phần nào xử lý đăng nhập?” thay vì phải grep tên biến
+✅Phân tích ảnh hưởng của thay đổi trước khi commit
+✅Có hướng dẫn đọc codebase theo đúng thứ tự phụ thuộc
+✅Giao diện có thể điều chỉnh độ sâu thông tin cho junior dev, PM hoặc power user
+
+Công cụ này hỗ trợ nhiều môi trường như Claude Code, Codex, Cursor, Copilot, OpenCode, Gemini CLI và nhiều nền tảng khác.
+
+Với những ai từng mất rất nhiều thời gian chỉ để hiểu một dự án lớn, kiểu công cụ này thực sự có thể tiết kiệm rất nhiều công sức.
+
+Link repo: https://github.com/Lum1104/Understand-Anything
+
+Mình dịch và edit 1 chút từ 1 bài post của 1 bạn người Việt mình mới đọc được trên Linkedin. Xưng hô "mình" ở đây là bạn ấy chứ không phải mình. Link bài viết gốc: https://www.linkedin.com/posts/hoang-van-hao_i-just-used-a-claude-code-plugin-at-a-200000-share-7456883282031333376-SwUk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB8zGzgBCs7tk97g0kh_mpAfaczB4jwFYeo
+
+P/s: Theo quan điểm của cá nhân mình, Understand-Anything sẽ khá là ngốn token, do chạy nhiều agent, kiểu như LLM council của Karpathy. Tuy nhiên có lẽ sẽ tốn ít hơn so với LLM council, do 5 agent của Understand-Anything mỗi con sẽ đánh giá 1 khía cạnh, làm việc trên 1 tập con của codebase, trong khi với LLM council thì cả 5 con sẽ 
+
+
 <h1 align="center">Understand Anything</h1>
 
 <p align="center">
